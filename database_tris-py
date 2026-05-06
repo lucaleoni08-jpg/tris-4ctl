@@ -1,0 +1,36 @@
+import pymysql
+
+# Questa è la tua configurazione che funzionava
+DB_CONFIG = {
+    "host": "127.0.0.1",
+    "user": "4CTL_leoni.l.150508",
+    "password": "Ottobre2025!",
+    "database": "4CTL_leoni.l.150508",
+    "port": 3307,
+    "cursorclass": pymysql.cursors.DictCursor, # Ti restituisce i dati come dizionari (più facili da leggere)
+}
+
+def get_connection():
+    """Crea la connessione al database"""
+    return pymysql.connect(**DB_CONFIG)
+
+def esegui_select(query, params=()):
+    """Serve per LEGGERE i dati (es: Classifica o statistiche)"""
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(query, params)
+            return cursor.fetchall()
+    finally:
+        conn.close()
+
+def esegui_dml(query, params=()):
+    """Serve per SCRIVERE i dati (es: Salvare una partita o un nuovo giocatore)"""
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(query, params)
+            conn.commit()
+            return cursor.rowcount
+    finally:
+        conn.close()
