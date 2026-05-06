@@ -48,7 +48,7 @@ def salva_risultato_partita(id_g1, id_g2, id_vincitore, esito):
     """
     # id_vincitore sarà l'ID di chi ha vinto, oppure None se è pareggio
     db.esegui_dml(query, (id_g1, id_g2, id_vincitore, esito))
-    print("Risultato della partita salvato nel database!")
+    print("Risultato della partita salvato nel database.")
 
 def mostra_classifica():
     query = """
