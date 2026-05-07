@@ -25,12 +25,11 @@ Il progetto è stato realizzato da:
 
 ## Istruzioni per l'installazione
 1. Clonare il repository.
-2. Eseguire lo script SQL contenuto in `schema.sql` su phpMyAdmin.
-3. Aprire il tunnel SSH tramite il comando:
+2. Aprire il tunnel SSH tramite il comando:
   
    ssh -N -L 3307:localhost:3306 [utente]@lab.alberghetti.cloud
 
    IMPORTANTE:Il nome utente non deve includere il prefisso 4CTL_
 
-5. Avviare il gioco:
+3. Avviare il gioco:
   python main.py
