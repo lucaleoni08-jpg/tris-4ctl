@@ -19,8 +19,8 @@ Il programma permette di sfidare un altro giocatore, salvare i risultati in temp
 
 ## Organizzazione del Gruppo
 Il progetto è stato realizzato da:
-1. [LeoniLuca]: Responsabile database, connessione Python-SQL e gestione tabelle.
-2. [DesantisThomas]: Responsabile logica di gioco (Tris) e integrazione menu.
+1. [LeoniLuca]: Responsabile database, connessione Python-SQL e e integrazione menu.
+2. [DesantisThomas]: Responsabile logica di gioco (Tris) e gestione tabelle.
 3. [TaglianiRocco]: Responsabile statistiche, query SQL avanzate e documentazione.
 
 ## Istruzioni per l'installazione
